@@ -4,7 +4,7 @@ package example8;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-
+//<> Generics
 public class ArrayListExample {
 
     public static void main(String[] args) {
@@ -42,9 +42,10 @@ public class ArrayListExample {
 
         Iterator<Integer> itr = list.iterator();
 
-//        while (itr.hasNext()) {
-//            System.out.println(itr.next());
-//        }
+
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
 
     }
 

@@ -1,24 +1,46 @@
 package example8;
 
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
+
+class Address {
+
+    int pincode;
+    String number;
+}
 
 public class LinkedListExample {
 
     public static void main(String[] args) {
+       // List
         LinkedList<String> list = new LinkedList<>();
         list.add("Anant");
         list.add("Rabin");
         list.addFirst("Shanti");
         list.addLast("Dolker");
 
-        //System.out.println(list.size());
+        list.addFirst("Zimpa");
 
-        Iterator<String> itr = list.iterator();
+        System.out.println(list);
 
-        while(itr.hasNext()) {
-            System.out.println(itr.next());
-        }
+//        Iterator<String> itr = list.iterator();
+//
+//        while(itr.hasNext()) {
+//            System.out.println(itr.next());
+//        }
+
+     //   [Zimpa, Shanti, Anant, Rabin , dolker]
+
+//        ListIterator<String> itr1 = list.listIterator();
+//
+//        while(itr1.hasNext()) {
+//            System.out.println(itr1.next());
+//        }
+//
+//        System.out.println("---------------------");
+//
+//        while(itr1.hasPrevious()) {
+//            System.out.println(itr1.previous());
+//        }
 
     }
 }
