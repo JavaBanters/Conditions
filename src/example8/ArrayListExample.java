@@ -3,7 +3,10 @@ package example8;
 // Generics
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
+
 //<> Generics
 public class ArrayListExample {
 
@@ -46,6 +49,16 @@ public class ArrayListExample {
         while (itr.hasNext()) {
             System.out.println(itr.next());
         }
+
+
+        HashSet<Integer> set = new HashSet<>();
+        set.add(1);
+        set.add(2);
+        set.add(1);
+        set.add(1);
+        set.add(1);
+
+        System.out.println("The set is "+ set);
 
     }
 
