@@ -2,10 +2,7 @@ package example8;
 
 // Generics
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 //<> Generics
 public class ArrayListExample {
@@ -25,7 +22,8 @@ public class ArrayListExample {
 
         //list.stream().toArray()
 
-        System.out.println(list.size());
+        System.out.println(list);
+        //System.out.println(list.size());
 
 
         Integer[] arrayFromList = list.stream().toArray(Integer[]::new);
@@ -50,13 +48,16 @@ public class ArrayListExample {
             System.out.println(itr.next());
         }
 
-
-        HashSet<Integer> set = new HashSet<>();
+        //Wierd
+        //HashSet<Integer> set = new HashSet<>();
+        //new PriorityQueueExample.CustomIntegerComparator()
+        //Set<Integer> set = new TreeSet<>(); //natural order
+        Set<Integer> set = new TreeSet<>(Comparator.reverseOrder());
+        set.add(4);
         set.add(1);
         set.add(2);
-        set.add(1);
-        set.add(1);
-        set.add(1);
+        set.add(6);
+        set.add(2);
 
         System.out.println("The set is "+ set);
 

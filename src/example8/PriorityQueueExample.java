@@ -6,7 +6,6 @@ import java.util.PriorityQueue;
 public class PriorityQueueExample {
 
     static class CustomIntegerComparator implements Comparator<Integer> {
-
         @Override
         public int compare(Integer o1, Integer o2) {
             return o1 < o2 ? 1 : -1;
@@ -23,14 +22,14 @@ public class PriorityQueueExample {
 
         PriorityQueue<Integer> integers = new PriorityQueue<>();
         integers.add(11);
-        integers.add(5);
+        integers.add(1);
         integers.add(-1);
         integers.add(12);
         integers.add(6);
 
         System.out.println(testIntegersPQ);
 
-        System.out.println(integers);
+        System.out.println("Natural order "+integers);
     }
 
 

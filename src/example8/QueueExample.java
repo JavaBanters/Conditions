@@ -36,7 +36,7 @@ public class QueueExample {
         priorityQueueCustom.add(3);
         priorityQueueCustom.add(4);
 
-        System.out.println(queue);
+        System.out.println("Normal"+queue);
         System.out.println(priorityQueue);
         System.out.println(priorityQueueCustom);
 
