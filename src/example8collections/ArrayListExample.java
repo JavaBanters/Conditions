@@ -21,17 +21,18 @@ public class ArrayListExample {
         //list.set(1, 100);
 
         //list.stream().toArray()
-
+        System.out.println("Print via the toString method which will be called internally");
         System.out.println(list);
         //System.out.println(list.size());
 
 
         Integer[] arrayFromList = list.stream().toArray(Integer[]::new);
 
-
+        System.out.println("Printing via for loop");
         for (int i = 0; i< arrayFromList.length; i++) {
-            System.out.println(arrayFromList[i]);
+            System.out.print(arrayFromList[i]+" ");
         }
+        System.out.println();
 
         //list.clear();
 
@@ -43,10 +44,13 @@ public class ArrayListExample {
 
         Iterator<Integer> itr = list.iterator();
 
+        System.out.println("Printing via iterator");
 
         while (itr.hasNext()) {
-            System.out.println(itr.next());
+            System.out.print(itr.next()+" ");
         }
+
+        System.out.println();
 
         //Wierd
         //HashSet<Integer> set = new HashSet<>();
@@ -59,7 +63,11 @@ public class ArrayListExample {
         set.add(6);
         set.add(2);
 
-        System.out.println("The set is "+ set);
+        System.out.println("Printing via streams");
+        set.stream().forEach(e -> System.out.print(e+" "));
+        System.out.println();
+        System.out.println("Printing via toString method which will be called internally");
+        System.out.println(set);
 
     }
 
